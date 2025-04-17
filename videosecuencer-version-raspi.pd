@@ -1,0 +1,452 @@
+#N canvas 308 25 1132 752 12;
+#X declare -lib zexy;
+#X declare -lib Gem;
+#X obj 176 55 mknob 25 100 0 127 0 0 empty empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 176 88 int;
+#X floatatom 176 115 5 0 0 0 - - - 0;
+#X obj 91 134 metro 500;
+#X obj 91 86 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X text 78 37 1 secuencia automatica;
+#X obj 42 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text -9 127 random;
+#X obj 3 153 spigot;
+#X obj 3 180 drunk 8;
+#X obj 92 199 cup;
+#X obj 92 227 mod 8;
+#X floatatom 92 257 5 0 0 0 - - - 0;
+#X obj 94 288 sel 1 2 3 4 5 6 7;
+#X obj 401 12 ctlin;
+#X floatatom 391 48 5 0 0 0 - - - 0;
+#X floatatom 436 45 5 0 0 0 - - - 0;
+#X obj 403 74 sel 123;
+#X obj 379 102 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 404 102 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 307 206 notein;
+#X text 300 185 MIDI IN;
+#X obj 306 234 stripnote;
+#X floatatom 306 262 5 0 0 0 - - - 0;
+#X obj 306 287 route 36 37 38 39 48 41 42;
+#X obj 216 331 bng 15 250 50 0 a empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 241 331 bng 15 250 50 0 b empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 264 331 bng 15 250 50 0 c empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 289 331 bng 15 250 50 0 d empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 312 331 bng 15 250 50 0 e empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 337 331 bng 15 250 50 0 f empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 360 331 bng 15 250 50 0 g empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 385 331 bng 15 250 50 0 h empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 182 368 0;
+#X msg 216 368 1;
+#X msg 250 368 2;
+#X msg 285 368 3;
+#X msg 317 369 4;
+#X msg 351 369 5;
+#X msg 385 369 6;
+#X msg 420 369 7;
+#X obj 260 417 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
+#X obj 649 44 mknob 25 100 0 127 0 0 empty empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 649 77 int;
+#X floatatom 649 104 5 0 0 0 - - - 0;
+#X obj 564 123 metro 500;
+#X obj 564 75 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 515 119 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 499 97 random;
+#X obj 476 142 spigot;
+#X obj 476 169 drunk 8;
+#X obj 565 188 cup;
+#X obj 565 216 mod 8;
+#X floatatom 565 246 5 0 0 0 - - - 0;
+#X obj 567 277 sel 1 2 3 4 5 6 7;
+#X text 536 37 2 secuencia automatica;
+#X obj 548 320 bng 15 250 50 0 i empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 573 320 bng 15 250 50 0 j empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 596 320 bng 15 250 50 0 k empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 621 320 bng 15 250 50 0 l empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 644 320 bng 15 250 50 0 m empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 669 320 bng 15 250 50 0 n empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 692 320 bng 15 250 50 0 o empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 717 320 bng 15 250 50 0 p empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 514 357 0;
+#X msg 548 357 1;
+#X msg 582 357 2;
+#X msg 617 357 3;
+#X msg 649 358 4;
+#X msg 683 358 5;
+#X msg 717 358 6;
+#X msg 752 358 7;
+#X obj 611 417 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
+#X text 433 415 sec 1;
+#X text 490 416 sec 2;
+#X obj 446 438 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 511 440 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 441 459 spigot;
+#X obj 500 460 spigot;
+#X obj 67 390 mknob 25 100 0 7 0 0 empty empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 2100 1;
+#X text 57 370 paso;
+#X obj 65 431 int;
+#X obj 113 389 mknob 25 100 0 1 0 0 empty empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 3400 1;
+#X text 103 368 valor;
+#X floatatom 113 420 5 0 0 0 - - - 0;
+#X text 460 397 valor;
+#X text 441 508 sec 1;
+#X text 498 509 sec 2;
+#X obj 454 531 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 519 533 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 449 552 spigot;
+#X obj 508 553 spigot;
+#X text 468 490 pasos;
+#X obj 4 -2 declare -lib zexy;
+#X obj 114 525 demux 1 2 3 4 5 6 7 8;
+#X obj 55 555 r a;
+#X obj 88 554 r b;
+#X obj 121 555 r c;
+#X obj 154 554 r d;
+#X obj 186 554 r e;
+#X obj 219 553 r f;
+#X obj 252 554 r g;
+#X obj 285 553 r h;
+#X msg 230 588 0.383838;
+#X msg 268 587 0.79798;
+#X msg 307 587 0.909091;
+#X obj -57 625 s valor1;
+#X obj 9 625 s valor2;
+#X obj 74 626 s valor3;
+#X obj 140 626 s valor4;
+#X obj 204 626 s valor5;
+#X obj 270 626 s valor6;
+#X obj 335 627 s valor7;
+#X obj 401 627 s valor8;
+#X obj 498 645 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 552 643 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 483 672 spigot;
+#X obj 551 674 spigot;
+#X obj 742 511 demux 1 2 3 4 5 6 7 8;
+#X msg 663 576;
+#X msg 701 576;
+#X msg 739 575;
+#X msg 778 575;
+#X msg 820 574;
+#X msg 858 574;
+#X msg 896 573;
+#X msg 935 573;
+#X obj 683 541 r i;
+#X obj 716 540 r j;
+#X obj 749 541 r k;
+#X obj 782 540 r l;
+#X obj 814 540 r m;
+#X obj 847 539 r n;
+#X obj 880 540 r o;
+#X obj 913 539 r p;
+#X obj 571 611 s valor9;
+#X obj 637 611 s valor10;
+#X obj 702 612 s valor11;
+#X obj 768 612 s valor12;
+#X obj 832 612 s valor13;
+#X obj 898 612 s valor14;
+#X obj 963 613 s valor15;
+#X obj 1029 613 s valor16;
+#X text 157 17 velocidad secuencia automatica;
+#X text -111 133 secuencia control x voz;
+#X obj -88 189 adc~;
+#X obj -87 222 unsig~;
+#X floatatom -87 250 5 0 0 0 - - - 0;
+#X obj -88 317 spigot;
+#X obj -48 292 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text -52 274 activar;
+#N canvas 67 224 450 432 :: 0;
+#X text 24 16 the format [pix_film] is able to decode depends on the
+system you are running Gem.;
+#X text 30 101 Win32: [pix_film] should be able to decode AVIs (all
+installed codecs). If you are lucky and your version of Gem is compiled
+with quicktime-support and you have quicktime installed on your machine
+\, you might be able to play back quicktime MOVs.;
+#X text 31 63 macOS-X: [pix_film] should be ablte to decode quicktime
+MOVs.;
+#X text 32 175 linux: that's a bit tricky. Since there is no "native"
+video-format for linux it heavily depends on what you have installed
+on your machine and how Gem has been compiled. If your system supports
+it \, [pix_film] is able to use quicktime4linux/libquicktime to decode
+quicktime-MOVs \, libmpeg1/libmpeg3 to decode MPEG2-videos and libaviplay
+which opens a wide range of supported formats (with the possibility
+to install additional codec-plugins) \, from AVI via MPEG2 to DivX
+\, although i have found MPEG support rather unstable. libaviplay does
+not support quicktime decoding. There is also some ruddy ffmpeg support
+(apart from the one supplied by libaviplay).;
+#X text 36 351 although one wouldn't believe it \, but i have found
+that under linux i could play most formats...;
+#X restore -684 404 pd :: FORMATS;
+#X obj -682 426 declare -lib Gem;
+#X obj -685 15 gemhead;
+#X obj -685 348 pix_texture;
+#X obj -673 45 bng 25 250 50 0 empty open-video-gui-out empty 0 -6
+0 8 #fcfcfc #000000 #000000;
+#X obj -663 264 unpack 0 0 0;
+#X floatatom -673 287 5 0 0 3 length - - 0;
+#X floatatom -624 287 5 0 0 3 width - - 0;
+#X floatatom -574 287 5 0 0 3 height - - 0;
+#X obj -640 239 bng 15 250 50 0 empty empty end_reached 20 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom -554 187 5 0 10000 1 frame$ - - 0;
+#X obj -673 74 openpanel;
+#X msg -673 94 open \$1;
+#X obj -685 370 rectangle 4 3;
+#X msg -667 137 auto \$1;
+#X obj -667 119 tgl 15 0 empty empty empty 0 -6 0 8 #fcfcfc #000000
+#000000 0 1;
+#X msg -656 161 colorspace Grey;
+#X obj -551 100 hsl 100 15 0 1 0 0 audiosample position-visualizar
+empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj -554 153 *;
+#X text -643 46 open a movie-clip;
+#X obj -672 321 s lenght;
+#X obj -539 123 r lenght;
+#X obj -685 203 pix_film;
+#X text -641 53 comment;
+#X obj -491 223 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X msg -489 247 fullscreen \$1;
+#X msg -488 276 create \, 1;
+#X msg -406 279 0 \, destroy;
+#X obj -451 328 gemwin;
+#X msg 35 590 0.393939;
+#X msg 192 588 0.232323;
+#X msg 156 589 0.242424;
+#X msg 111 589 0.444444;
+#X msg 73 590 0.828283;
+#X floatatom -494 57 5 0 10000 1 frame$ - - 0;
+#X msg 119 446 set \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 3 0 8 0;
+#X connect 3 0 10 0;
+#X connect 4 0 3 0;
+#X connect 6 0 8 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 25 0;
+#X connect 13 1 26 0;
+#X connect 13 2 27 0;
+#X connect 13 3 28 0;
+#X connect 13 4 29 0;
+#X connect 13 5 30 0;
+#X connect 13 6 31 0;
+#X connect 13 7 32 0;
+#X connect 14 0 15 0;
+#X connect 14 1 16 0;
+#X connect 15 0 18 0;
+#X connect 15 0 17 0;
+#X connect 17 0 19 0;
+#X connect 20 0 22 0;
+#X connect 20 1 22 1;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 24 1 26 0;
+#X connect 24 2 27 0;
+#X connect 24 3 28 0;
+#X connect 24 4 29 0;
+#X connect 24 5 30 0;
+#X connect 24 6 31 0;
+#X connect 24 7 32 0;
+#X connect 25 0 33 0;
+#X connect 26 0 34 0;
+#X connect 27 0 35 0;
+#X connect 28 0 36 0;
+#X connect 29 0 37 0;
+#X connect 30 0 38 0;
+#X connect 31 0 39 0;
+#X connect 32 0 40 0;
+#X connect 33 0 41 0;
+#X connect 34 0 41 0;
+#X connect 35 0 41 0;
+#X connect 36 0 41 0;
+#X connect 37 0 41 0;
+#X connect 38 0 41 0;
+#X connect 39 0 41 0;
+#X connect 40 0 41 0;
+#X connect 41 0 94 1;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 44 0 45 1;
+#X connect 45 0 49 0;
+#X connect 45 0 51 0;
+#X connect 46 0 45 0;
+#X connect 47 0 49 1;
+#X connect 49 0 50 0;
+#X connect 50 0 51 0;
+#X connect 51 0 52 0;
+#X connect 52 0 53 0;
+#X connect 53 0 54 0;
+#X connect 54 0 56 0;
+#X connect 54 1 57 0;
+#X connect 54 2 58 0;
+#X connect 54 3 59 0;
+#X connect 54 4 60 0;
+#X connect 54 5 61 0;
+#X connect 54 6 62 0;
+#X connect 54 7 63 0;
+#X connect 56 0 64 0;
+#X connect 57 0 65 0;
+#X connect 58 0 66 0;
+#X connect 59 0 67 0;
+#X connect 60 0 68 0;
+#X connect 61 0 69 0;
+#X connect 62 0 70 0;
+#X connect 63 0 71 0;
+#X connect 64 0 72 0;
+#X connect 65 0 72 0;
+#X connect 66 0 72 0;
+#X connect 67 0 72 0;
+#X connect 68 0 72 0;
+#X connect 69 0 72 0;
+#X connect 70 0 72 0;
+#X connect 71 0 72 0;
+#X connect 72 0 118 1;
+#X connect 75 0 77 1;
+#X connect 76 0 78 1;
+#X connect 77 0 94 0;
+#X connect 78 0 118 0;
+#X connect 79 0 81 0;
+#X connect 81 0 90 0;
+#X connect 81 0 91 0;
+#X connect 82 0 84 0;
+#X connect 84 0 186 0;
+#X connect 88 0 90 1;
+#X connect 89 0 91 1;
+#X connect 90 0 41 0;
+#X connect 91 0 72 0;
+#X connect 94 0 180 0;
+#X connect 94 1 184 0;
+#X connect 94 2 183 0;
+#X connect 94 3 182 0;
+#X connect 94 4 181 0;
+#X connect 94 5 103 0;
+#X connect 94 6 104 0;
+#X connect 94 7 105 0;
+#X connect 95 0 180 0;
+#X connect 96 0 184 0;
+#X connect 97 0 183 0;
+#X connect 98 0 182 0;
+#X connect 99 0 181 0;
+#X connect 100 0 103 0;
+#X connect 101 0 104 0;
+#X connect 102 0 105 0;
+#X connect 103 0 111 0;
+#X connect 103 0 116 0;
+#X connect 104 0 112 0;
+#X connect 104 0 116 0;
+#X connect 105 0 113 0;
+#X connect 105 0 116 0;
+#X connect 114 0 116 1;
+#X connect 115 0 117 1;
+#X connect 116 0 185 0;
+#X connect 118 0 119 0;
+#X connect 118 1 120 0;
+#X connect 118 2 121 0;
+#X connect 118 3 122 0;
+#X connect 118 4 123 0;
+#X connect 118 5 124 0;
+#X connect 118 6 125 0;
+#X connect 118 7 126 0;
+#X connect 119 0 135 0;
+#X connect 119 0 117 0;
+#X connect 120 0 136 0;
+#X connect 120 0 117 0;
+#X connect 121 0 137 0;
+#X connect 121 0 117 0;
+#X connect 122 0 138 0;
+#X connect 122 0 117 0;
+#X connect 123 0 139 0;
+#X connect 123 0 117 0;
+#X connect 124 0 140 0;
+#X connect 124 0 117 0;
+#X connect 125 0 141 0;
+#X connect 125 0 117 0;
+#X connect 126 0 142 0;
+#X connect 126 0 117 0;
+#X connect 127 0 119 0;
+#X connect 128 0 120 0;
+#X connect 129 0 121 0;
+#X connect 130 0 122 0;
+#X connect 131 0 123 0;
+#X connect 132 0 124 0;
+#X connect 133 0 125 0;
+#X connect 134 0 126 0;
+#X connect 145 0 146 0;
+#X connect 146 0 147 0;
+#X connect 147 0 148 0;
+#X connect 149 0 148 1;
+#X connect 153 0 173 0;
+#X connect 154 0 164 0;
+#X connect 155 0 162 0;
+#X connect 156 0 157 0;
+#X connect 156 1 158 0;
+#X connect 156 2 159 0;
+#X connect 157 0 171 0;
+#X connect 161 0 173 1;
+#X connect 162 0 163 0;
+#X connect 163 0 173 0;
+#X connect 165 0 173 0;
+#X connect 166 0 165 0;
+#X connect 167 0 173 0;
+#X connect 168 0 169 0;
+#X connect 169 0 161 0;
+#X connect 172 0 169 1;
+#X connect 173 0 154 0;
+#X connect 173 1 156 0;
+#X connect 173 2 160 0;
+#X connect 175 0 176 0;
+#X connect 176 0 179 0;
+#X connect 177 0 179 0;
+#X connect 178 0 179 0;
+#X connect 180 0 106 0;
+#X connect 180 0 116 0;
+#X connect 181 0 110 0;
+#X connect 181 0 116 0;
+#X connect 182 0 109 0;
+#X connect 182 0 116 0;
+#X connect 183 0 108 0;
+#X connect 183 0 116 0;
+#X connect 184 0 107 0;
+#X connect 184 0 116 0;
+#X connect 185 0 168 0;
+#X connect 186 0 77 0;
+#X connect 186 0 78 0;
