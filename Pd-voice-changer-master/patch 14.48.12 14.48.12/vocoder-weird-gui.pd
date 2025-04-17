@@ -1,0 +1,75 @@
+#N canvas 0 0 1440 872 12;
+#X declare -lib iemgui;
+#X obj 39 52 declare -lib iemgui;
+#X obj 80 136 iem_image 0 0 0 empty empty;
+#X obj 156 -128 tgl 32 0 \$0-unmute \$0-volume Unmute -2 -10 0 10 #fcfcfc
+#000000 #00fc04 0 0.5;
+#X obj 147 -68 vsl 32 55 0 1 0 0 \$0-volume empty Volume -2 -10 0 10
+#fcfcfc #000000 #00fc04 0 1;
+#X obj 216 -59 loadbang;
+#X msg 216 -21 0.5;
+#X obj 68 229 iem_image 0 0 0 empty empty;
+#X obj 33 907 iem_image 0 0 0 empty empty;
+#X obj 33 2203;
+#X obj 33 2203;
+#X obj 33 2203;
+#X obj -188 1830 iem_image /Users/MIKI/Desktop/puredata/modulos/Pd-voice-changer-master/patch\ 14.48.12\ 14.48.12/guivocoder2.gif
+0 0 empty empty;
+#X obj 295 2464 mknob 30 100 -20 20 0 0 transposegui empty empty -2
+-6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 371 2464 mknob 30 100 -20 20 0 0 windowgui empty empty -2 -6
+0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 446 2466 mknob 30 100 -20 20 0 0 delaygui empty empty -2 -6
+0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 625 2493 mknob 30 100 0 1 0 0 revrs empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 777 2492 mknob 30 100 0 1 0 0 revdray empty empty -2 -6 0 8
+#fcfcfc #000000 #000000 0 1;
+#X obj 777 2684 mknob 30 100 -1000 1000 0 0 freq freqmodgui empty -2
+-6 0 8 #fcfcfc #000000 #000000 0 1;
+#X text 274 2496 transpose;
+#X text 369 2498 window;
+#X text 443 2500 delay;
+#X text 742 2721 frecuency shift;
+#X text 604 2522 room size;
+#X obj 702 2495 mknob 30 100 0 1 0 0 revwet empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X text 702 2524 wet;
+#X text 777 2524 dry;
+#X obj 384 2377 tgl 15 0 pson empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 705 2430 tgl 15 0 active-reverb empty empty 17 7 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 773 2628 tgl 15 0 active-mod empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 465 2296 adc~;
+#X obj 498 2337 outlet~;
+#X obj 511 2313 *~;
+#X obj 447 2322 tgl 15 0 empty \$0-unmute empty 17 7 0 10 #fcfcfc #000000
+#000000 0 0.5;
+#X obj 365 2300 r \$0-volume;
+#X obj 491 2367 scope~ 152 108 256 3 128 -1 1 0 0 0 0 102 255 51 135
+135 135 0 98 102 0 empty;
+#X msg 558 2321 bufsize 1000;
+#X msg 579 2340 range -1 1;
+#X obj 423 2581 tgl 15 0 combon empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 405 2668 mknob 25 100 0 127 0 0 cmdfdelaygui empty empty -2
+-6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 457 2670 mknob 25 100 0 127 0 0 cmbffeedbackgui empty empty
+-2 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X text 398 2695 delay;
+#X text 461 2700 feedback;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 7 0 8 0;
+#X connect 7 0 9 0;
+#X connect 7 0 10 0;
+#X connect 29 0 31 0;
+#X connect 29 1 31 0;
+#X connect 31 0 30 0;
+#X connect 31 0 34 0;
+#X connect 32 0 31 1;
+#X connect 33 0 32 0;
+#X connect 35 0 34 0;
+#X connect 36 0 34 0;

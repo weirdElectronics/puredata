@@ -1,0 +1,53 @@
+#N canvas 0 71 1262 742 10;
+#X declare -lib cyclone;
+#X obj 185 191 jk_audio_output~;
+#X obj -84 -115 r~ audio_in;
+#X obj 176 114 s~ audio_in;
+#X obj 186 166 r~ audio_out;
+#X obj -84 408 s~ audio_out;
+#X obj -78 294 jk_reverb~;
+#X obj -77 167 jk_combfilter~;
+#X obj -78 41 jk_ssb_modulation~;
+#X obj -84 -89 jk_pitch_shifter~;
+#X obj 176 -76 jk_audio_input~;
+#X text 3 -103 PITCH SHIFTER;
+#X text -8 22 MODULATION;
+#X text -11 151 COMB FILTER;
+#X text -1 275 REVERB;
+#X obj 642 -16 mknob 25 100 -20 20 0 0 transpose transposegui empty
+-2 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 720 -17 mknob 25 100 0 1000 0 0 window windowgui empty -2 -6
+0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 795 -18 mknob 25 100 0 1000 0 0 delay delaygui empty -2 -6 0
+8 #fcfcfc #000000 #000000 0 1;
+#X obj 637 328 mknob 25 100 -1000 1000 0 0 freq freqmodgui empty -2
+-6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 644 93 mknob 25 100 0 1 0 0 rev_room_size revrs empty -2 -6
+0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 717 94 mknob 25 100 0 1 0 0 rev_wet revwet empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 799 94 mknob 25 100 0 1 0 0 rev_dry revdry empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 647 218 mknob 25 100 0 1000 0 0 cmbf_delay cmdfdelaygui empty
+-2 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 724 217 mknob 25 100 0 1000 0 0 cmbf_feedback cmbffeedbackgui
+empty -2 -6 0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 859 325 mknob 25 100 0 1 0 0 vol-out empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 861 -101 mknob 25 100 0 1 0 0 vol-in empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X text 858 305 vol out;
+#X text 853 -70 vol in;
+#X text 682 -47 PITCH SHIFTER;
+#X text 632 297 MODULATION;
+#X text 704 64 REVERB;
+#X text 696 186 COMB FILTER;
+#X obj 729 405 declare -lib cyclone;
+#X connect 1 0 8 0;
+#X connect 1 0 4 0;
+#X connect 3 0 0 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 9 0 2 0;
