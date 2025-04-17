@@ -1,0 +1,58 @@
+#N canvas 0 23 821 699 12;
+#X obj 30 145 adc~;
+#X obj 29 219 writesf~;
+#X msg 102 184 start;
+#X msg 188 190 stop;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array array2 83136 float 2;
+#X coords 0 1 83136 -1 200 140 1 0 0;
+#X restore 242 240 graph;
+#X obj 21 377 soundfiler;
+#X obj 21 425 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-257985 -1 -1 83136 256;
+#X obj 453 293 line~;
+#X text 127 422 nro de samples;
+#X text 578 256 de 0 a 127409 en 3 seg;
+#X obj 452 371 dac~;
+#X msg 454 257 0 \, 147409 3342;
+#X obj 454 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 453 330 tabread~ array2;
+#X text 24 5 grabar y guardar un sonido desde entrante \, luego reproducirlo.
+;
+#X obj 93 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 101 164 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 188 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 170 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 172 230 del 500;
+#X obj 454 205 r play;
+#X obj 94 51 r save;
+#X obj 101 132 r play-rec;
+#X obj 189 133 r stop-rec;
+#X msg 93 107 open hola.wav;
+#X msg 20 323 read -resize hola.wav array2;
+#X connect 0 0 1 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 5 0 6 0;
+#X connect 7 0 13 0;
+#X connect 11 0 7 0;
+#X connect 12 0 11 0;
+#X connect 13 0 10 0;
+#X connect 13 0 10 1;
+#X connect 15 0 24 0;
+#X connect 16 0 2 0;
+#X connect 17 0 3 0;
+#X connect 17 0 19 0;
+#X connect 18 0 25 0;
+#X connect 19 0 18 0;
+#X connect 20 0 12 0;
+#X connect 21 0 15 0;
+#X connect 22 0 16 0;
+#X connect 23 0 17 0;
+#X connect 24 0 1 0;
+#X connect 25 0 5 0;
