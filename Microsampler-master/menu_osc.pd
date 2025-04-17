@@ -1,0 +1,257 @@
+#N canvas 108 2 1165 794 12;
+#X declare -lib iemgui;
+#X obj 41 241 loadbang;
+#X msg 16 403 connect localhost 3000;
+#X obj 50 381 oscformat;
+#X obj 41 186 netsend -u -b;
+#X obj 403 -797 tgl 20 0 empty GRABAR grabar/parar 25 10 0 12 #fcfcfc
+#000000 #000000 0 1;
+#X obj 513 121 t f b;
+#X msg 538 393 set notes;
+#X obj 500 249 t f b;
+#X obj 44 8 t f b;
+#X obj 178 29 t f b;
+#X obj 336 47 t f b;
+#X msg 76 121 set menu;
+#X msg 315 171 set rec;
+#X obj 670 185 t f b;
+#X msg 702 216 set dsp;
+#X obj 826 -835 tgl 20 0 empty empty dsp\\\ on/off 0 -10 0 12 #fcfcfc
+#000000 #000000 0 1;
+#X msg 210 97 set first-pot;
+#X msg 368 95 set second-pot;
+#X obj 50 481 oscparse;
+#X obj 50 504 list trim;
+#X obj 50 530 route menu first-pot second-pot rec notes dsp;
+#X obj 72 650 print menu;
+#X obj 176 669 print pot1;
+#X obj 292 701 print pot2;
+#X obj 395 743 print rec;
+#X obj 491 775 print notes;
+#X obj 575 805 print dsp;
+#X msg 185 427 listen 3000;
+#X msg 279 452 listen 0;
+#X obj 50 456 netreceive -u -b;
+#X obj 319 -625 hsl 128 15 0 1 0 0 empty empty pot1 -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 316 -580 hsl 128 15 0 1 0 0 empty empty pot2 -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 987 -562 el default de pot1 y 2 es cambiar el start-point y
+end-point. En divergente se lo cambian a la ultima "nota" tocada.;
+#X obj 104 -599 tgl 15 0 empty menuon menu 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 446 -849 valores normalizados. Luego se mapea en un rango correspondiente
+;
+#N canvas 10 0 937 872 data-pal-dibujito 0;
+#X obj 112 344 i;
+#X obj 31 421 list prepend;
+#X obj 31 446 list trim;
+#X obj 112 321 * 4;
+#N canvas 965 29 937 300 testin 0;
+#X obj 11 64 route 0 1 2 3;
+#X obj 64 160 - 3;
+#X floatatom 64 185 5 0 0 0 - - - 0;
+#X obj 64 135 * 6;
+#X obj 117 157 i;
+#X obj 119 219 s op3;
+#X obj 166 158 i;
+#X obj 168 220 s op4;
+#X obj 117 132 * 5;
+#X obj 166 133 * 5;
+#X obj 11 138 i;
+#X obj 12 221 s op1;
+#X obj 64 219 s op2;
+#X obj 11 101 * 2;
+#X obj 11 27 inlet;
+#X connect 0 0 13 0;
+#X connect 0 1 3 0;
+#X connect 0 2 8 0;
+#X connect 0 3 9 0;
+#X connect 1 0 2 0;
+#X connect 2 0 12 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 8 0 4 0;
+#X connect 9 0 6 0;
+#X connect 10 0 11 0;
+#X connect 13 0 10 0;
+#X connect 14 0 0 0;
+#X restore 31 482 pd testin;
+#X obj 31 287 spigot;
+#X obj 112 287 spigot;
+#X obj 112 389 clip 0 3;
+#X obj 70 261 t f f, f 12;
+#X obj 185 413 s m;
+#X obj 185 364 t f f;
+#X obj 217 442 s selection;
+#X obj 47 30 inlet;
+#X obj 101 30 inlet;
+#X obj 3 31 inlet;
+#X connect 0 0 7 0;
+#X connect 0 0 10 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 5 0 1 0;
+#X connect 6 0 3 0;
+#X connect 7 0 1 1;
+#X connect 8 0 5 1;
+#X connect 8 1 6 1;
+#X connect 10 0 9 0;
+#X connect 10 1 11 0;
+#X connect 12 0 6 0;
+#X connect 13 0 5 0;
+#X connect 14 0 8 0;
+#X restore 102 -502 pd data-pal-dibujito;
+#X f 29;
+#X obj 202 -610 t f f;
+#X obj 302 -559 t f f;
+#X obj 234 -571 s p1;
+#X obj 334 -524 s p2;
+#X obj 178 -15 r p1;
+#X obj 336 -13 r p2;
+#X obj 136 -541 s mn;
+#X obj 43 -20 r mn;
+#X obj 403 -771 s r;
+#X obj 513 88 r r;
+#X obj 535 -796 hradio 25 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
+#X obj 535 -765 s nt;
+#X obj 502 246 r nt;
+#X obj 670 138 r dsp;
+#X obj 826 -809 s dsp;
+#X obj 104 -572 t f f;
+#X text 994 -494 pote 1 con el menu en on selecciono primero los pasos
+del menu;
+#X text 994 -448 pote 2 selecciono el valor de cada paso del menu ej
+univ-div o strech shrink;
+#X text 996 -397 para las duraciones de cada sample no tener el menu
+en on pero permanecer en modo div;
+#X text 994 -329 para el strech mantenerse en paso 2 del menu mono
+divergente y con el menu en on seleccionar la nota primero y despues
+con el pot 2 la altura;
+#X text 1000 -270 si los potes de seleccion se invierten se reproduce
+el sonido de ese fragmento a la inversa;
+#X obj 228 -647 r pot1;
+#X obj 242 -599 r pot2;
+#X obj 624 -823 r seleccion sample;
+#X obj 620 -755 r escuchar-sampler-seleccionado;
+#X msg 919 -828 loadbang;
+#X text 38 -326 menu mockup;
+#X obj 140 -217 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcc4
+#000000 #000000 0 1;
+#X obj 137 -171 hradio 15 1 0 5 empty empty empty 0 -8 0 10 #fcfcc4
+#000000 #000000 0;
+#X obj 137 -127 hradio 15 1 0 5 empty empty empty 0 -8 0 10 #fcfcc4
+#000000 #000000 0;
+#X text 221 -157 estas dos opciones se confirman con el boton de grabar/parar.
+;
+#X text 277 -220 strech/shrink u octavador.;
+#X obj 37 -265 vradio 15 1 0 4 empty empty empty 0 -8 0 10 #fcfcc4
+#000000 #000000 0;
+#X obj 137 -195 r op3;
+#X obj 137 -151 r op4;
+#X obj 137 -264 tgl 15 0 empty empty empty 17 7 0 10 #fcfcc4 #000000
+#000000 0 1;
+#X obj 137 -241 r op2;
+#X obj 137 -291 r op1;
+#X obj 37 -297 r m;
+#X text 65 -173 savepoint;
+#X text 63 -130 loadpoint;
+#X text 71 -218 duration;
+#X text 157 -267 un/div;
+#X text 55 -268 selection;
+#X obj 640 -961 int;
+#X floatatom 641 -931 5 0 0 0 - - - 0;
+#X obj 641 -905 change;
+#X obj 641 -872 s seleccion sample;
+#X obj 638 -986 r seleccionint;
+#X obj 36 -348 declare -lib iemgui;
+#X obj 700 -247 iem_image 0 0 0 empty empty;
+#X msg 919 -797 dsp 1 \;;
+#X obj 784 -326 iem_image 0 0 0 empty empty;
+#X obj 458 -721 iem_image /Users/MIKI/Downloads/sampanel.gif 0 0 empty
+empty;
+#X obj 565 -531 mknob 25 100 0 1 0 0 pot1 empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 665 -533 mknob 25 100 0 1 0 0 pot2 empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 754 -532 mknob 25 100 0 1 0 0 empty empty empty -2 -6 0 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 849 -531 mknob 25 100 0 7 0 0 seleccionint empty empty -2 -6
+0 8 #fcfcfc #000000 #000000 0 1;
+#X obj 758 -450 bng 15 250 50 0 escuchar-sampler-seleccionado empty
+empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 668 -428 bng 15 250 50 0 GRABAR empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 576 -449 bng 15 250 50 0 menuon empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 847 -428 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1071 -713 iem_image /Users/MIKI/Downloads/weirdlogogif\ (1).gif
+0 0 empty empty;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 4 0 44 0;
+#X connect 5 0 2 0;
+#X connect 5 1 12 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 0;
+#X connect 7 1 6 0;
+#X connect 8 0 2 0;
+#X connect 8 1 11 0;
+#X connect 9 0 2 0;
+#X connect 9 1 16 0;
+#X connect 10 0 2 0;
+#X connect 10 1 17 0;
+#X connect 11 0 2 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 0;
+#X connect 13 1 14 0;
+#X connect 14 0 2 0;
+#X connect 15 0 50 0;
+#X connect 16 0 2 0;
+#X connect 17 0 2 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 20 1 22 0;
+#X connect 20 2 23 0;
+#X connect 20 3 24 0;
+#X connect 20 4 25 0;
+#X connect 20 5 26 0;
+#X connect 27 0 29 0;
+#X connect 28 0 29 0;
+#X connect 29 0 18 0;
+#X connect 30 0 36 0;
+#X connect 31 0 37 0;
+#X connect 33 0 51 0;
+#X connect 36 0 35 1;
+#X connect 36 1 38 0;
+#X connect 37 0 35 2;
+#X connect 37 1 39 0;
+#X connect 40 0 9 0;
+#X connect 41 0 10 0;
+#X connect 43 0 8 0;
+#X connect 45 0 5 0;
+#X connect 46 0 47 0;
+#X connect 48 0 7 0;
+#X connect 49 0 13 0;
+#X connect 51 0 35 0;
+#X connect 51 1 42 0;
+#X connect 57 0 30 0;
+#X connect 58 0 31 0;
+#X connect 59 0 46 0;
+#X connect 60 0 46 0;
+#X connect 61 0 87 0;
+#X connect 69 0 64 0;
+#X connect 70 0 65 0;
+#X connect 72 0 63 0;
+#X connect 73 0 71 0;
+#X connect 74 0 68 0;
+#X connect 80 0 81 0;
+#X connect 81 0 82 0;
+#X connect 82 0 83 0;
+#X connect 84 0 80 0;
