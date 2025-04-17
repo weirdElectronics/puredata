@@ -1,0 +1,9 @@
+#N canvas 340 195 450 300 10;
+#X obj 39 31 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 39 5 r \$1;
+#X obj 39 59 f \$2;
+#X obj 39 88 s nota;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;

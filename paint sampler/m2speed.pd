@@ -1,0 +1,71 @@
+#N canvas 155 52 715 495 10;
+#X floatatom -8752 129 5 0 0 0 - - -;
+#X obj -8720 191 f 60;
+#X obj -8759 230 mtof;
+#X obj -8752 257 /;
+#X obj -8752 169 t f b;
+#X obj -8700 158 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj -8725 230 mtof;
+#X obj -8752 105 r nota;
+#X obj -8752 290 s playback-speed-notamidi;
+#X obj -8663 83 r playback-f-referencia;
+#X obj -8817 -108 r playback-octavador;
+#X floatatom -8817 -84 5 0 0 0 - - -;
+#X obj -8678 -14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -8712 -13 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -8637 -16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -8811 103 +;
+#X msg -8676 21 12;
+#X msg -8644 22 24;
+#X msg -8728 22 0;
+#X obj -8753 -15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -8831 -16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -8864 -17 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -8796 -15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -8882 16 -48;
+#X msg -8832 18 -24;
+#X msg -8783 25 -12;
+#X obj -8817 -58 sel -48 -24 -12 0 12 24 54;
+#X msg -8609 23 54;
+#X connect 0 0 4 0;
+#X connect 0 0 15 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 4 0 2 0;
+#X connect 4 1 1 0;
+#X connect 5 0 1 1;
+#X connect 6 0 3 1;
+#X connect 7 0 0 0;
+#X connect 10 0 11 0;
+#X connect 11 0 26 0;
+#X connect 12 0 17 0;
+#X connect 13 0 16 0;
+#X connect 14 0 27 0;
+#X connect 15 0 4 0;
+#X connect 16 0 15 1;
+#X connect 17 0 15 1;
+#X connect 18 0 15 1;
+#X connect 19 0 18 0;
+#X connect 20 0 24 0;
+#X connect 21 0 23 0;
+#X connect 22 0 25 0;
+#X connect 23 0 15 1;
+#X connect 24 0 15 1;
+#X connect 25 0 15 1;
+#X connect 26 0 21 0;
+#X connect 26 1 20 0;
+#X connect 26 2 22 0;
+#X connect 26 3 19 0;
+#X connect 26 4 13 0;
+#X connect 26 5 12 0;
+#X connect 26 6 14 0;
+#X connect 27 0 15 1;

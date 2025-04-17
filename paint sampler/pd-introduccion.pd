@@ -1,0 +1,21 @@
+#N canvas 577 73 762 538 16;
+#X text 75 10 Pure Data (o Pd) es un lenguaje de programación gráfico
+desarrollado por Miller Puckette durante los años 90 para la creación
+de música por ordenador interactiva y obras multimedia. Aunque Puckette
+es el principal autor del software \, Pd es un proyecto de código
+abierto y tiene una gran base de desarrolladores trabajando en nuevas
+extensiones al programa. Está publicado bajo una licencia similar
+a la licencia BSD. Pd es muy similar en alcance y diseño al programa
+original de Puckette \, Max(desarrollado cuando él estaba en IRCAM)
+\, y es hasta cierto grado interoperable con Max/MSP \, el sucesor
+comercial del lenguaje Max. Ambos Pd y Max son ejemplos discutibles
+de lenguajes de programación de "flujo de datos". En este tipo de
+lenguajes \, funciones u "objetos" son conectados o "parcheados" unos
+con otros en un ambiente gráfico que modela el flujo del control y
+el audio;
+#X text 86 377 El código abierto es un modelo de desarrollo de software
+basado en la colaboración abierta.1​ Se enfoca más en los beneficios
+prácticos (acceso al código fuente) que en cuestiones éticas o de
+libertad que tanto se destacan en el software libre.2​ Para muchos
+el término «libre» hace referencia al hecho de adquirir un software
+de manera gratuita.;

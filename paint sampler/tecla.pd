@@ -1,0 +1,9 @@
+#N canvas 785 348 450 300 10;
+#X obj 62 55 sel \$1;
+#X obj 49 28 key;
+#X obj 62 81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 60 107 s \$2;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;

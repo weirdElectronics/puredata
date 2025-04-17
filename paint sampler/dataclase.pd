@@ -1,0 +1,65 @@
+#N canvas 255 165 649 417 10;
+#X obj 20 306 osc~;
+#X text 53 307 objeto;
+#X text 50 49 Pure Data (o Pd) es un lenguaje de programación gráfico
+desarrollado por Miller Puckette durante los años 90 para la creación
+de música por ordenador interactiva y obras multimedia. Aunque Puckette
+es el principal autor del software \, Pd es un proyecto de código
+abierto y tiene una gran base de desarrolladores trabajando en nuevas
+extensiones al programa. Está publicado bajo una licencia similar
+a la licencia BSD. Pd es muy similar en alcance y diseño al programa
+original de Puckette \, Max(desarrollado cuando él estaba en IRCAM)
+\, y es hasta cierto grado interoperable con Max/MSP \, el sucesor
+comercial del lenguaje Max. Ambos Pd y Max son ejemplos discutibles
+de lenguajes de programación de "flujo de datos". En este tipo de
+lenguajes \, funciones u "objetos" son conectados o "parcheados" unos
+con otros en un ambiente gráfico que modela el flujo del control y
+el audio.;
+#X msg 20 332 hola mundi;
+#X text 94 333 mensaje;
+#X floatatom 22 362 5 0 0 0 - - -;
+#X text 62 361 number;
+#X obj 21 386 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X text 84 386 number 2 color;
+#X text 203 301 comment;
+#X text 255 301 comentario;
+#X obj 207 323 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 228 323 bang push;
+#X obj 207 347 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 225 348 on/off;
+#X obj 354 333 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 358 304 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 490 302 fader;
+#X text 481 334 radio;
+#X obj 351 356 cnv 15 100 60 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text 458 367 canvas (fondo) copy and paste;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array1 100 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 100 -1 200 140 1;
+#X restore 347 445 graph;
+#X text 257 490 array test;
+#X text 258 506 tabwrite~ y tabread~;
+#X obj 22 530 s hi;
+#X obj 94 530 r hi;
+#X text 16 487 sends y receives;
+#X obj 22 505 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 94 557 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 96 469 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 21 447 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 25 0 28 0;
+#X connect 27 0 24 0;
+#X connect 30 0 29 0;
