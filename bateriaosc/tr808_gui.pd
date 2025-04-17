@@ -1,0 +1,17 @@
+#N canvas 484 74 885 658 12;
+#X obj 260 311 iem_image /Users/MIKI/Downloads/808.gif 0 0 empty empty
+;
+#X obj 670 1200 bng 15 250 50 0 data5 empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 722 1199 bng 15 250 50 0 data3 empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 776 1200 bng 15 250 50 0 data2 empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 828 1200 bng 15 250 50 0 data1 empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 881 1200 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 934 1201 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 988 1200 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
